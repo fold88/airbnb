@@ -20,7 +20,7 @@ public class PalindromePairs {
         public List<List<Integer>> palindromePairs(String[] words) {
             List<List<Integer>> res = new ArrayList<>();
             if (words == null) return res;
-            HashMap<String, Integer> map = new HashMap<>();
+            Map<String, Integer> map = new HashMap<>();
             for (int i = 0; i < words.length; i++) map.put(words[i], i);
             for (int i = 0; i < words.length; i++) {
                 int left = 0, right = 0;
@@ -42,7 +42,7 @@ public class PalindromePairs {
         AirBnB Interview Question
      */
     public class Solution_2 {
-        class TrieNode {
+        private class TrieNode {
             TrieNode[] next;
             int index;
             List<Integer> list;
