@@ -16,13 +16,31 @@ public class FindingOcean {
             if (board[i][j] != oldColor || board[i][j] == newColor) {
                 return;
             }
-
+            // cpp:
+            // queue<int> q;
+            // queue<int, deque<int>> q;
+            // queue<int, list<int>> q;
+            // java:
+            // Queue<Integer> queue = new LinkedList<>();
             Queue<Integer> queue = new LinkedList<>();
+            // cpp:
+            // q.push(i);
+            // java:
+            // queue.add(i); // throw exception
+            // queue.offer(i); // return false
+            // int n = queue.element(); // throw exception
+            // int n = queue.peek(); // return null
             queue.add(i * board[0].length + j);
             board[i][j] = newColor;
 
             while (!queue.isEmpty()) {
-                int pos = queue.poll();
+                // cpp
+                // int pos = q.front();
+                // q.pop();
+                // java
+                // int pos = queue.remove(); // throw exception
+                // int pos = queue.poll();   // return null
+                int pos = queue.remove();
                 int m = pos / board[0].length;
                 int n = pos % board[0].length;
 
