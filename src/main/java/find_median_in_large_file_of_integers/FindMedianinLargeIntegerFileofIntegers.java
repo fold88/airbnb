@@ -58,6 +58,7 @@ public class FindMedianinLargeIntegerFileofIntegers {
             assertEquals(3.0, sol.findMedian(new int[]{3, -2, 7}), 1E-03);
             assertEquals(5.0, sol.findMedian(new int[]{-100, 99, 3, 0, 5, 7, 11, 66, -33}), 1E-03);
             assertEquals(4.5, sol.findMedian(new int[]{4, -100, 99, 3, 0, 5, 7, 11, 66, -33}), 1E-03);
+            assertEquals(2.0, sol.findMedian(new int[]{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}), 1E-03);
         }
     }
 }
